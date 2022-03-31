@@ -1,14 +1,14 @@
 plugins {
-    id("com.android.application") version Dependency.Gradle.version apply false
-    id("com.android.library") version Dependency.Gradle.version apply false
-    id("org.jetbrains.kotlin.android") version Dependency.Kotlin.version apply false
+    id("com.android.application") version Dep.Gradle.version apply false
+    id("com.android.library") version Dep.Gradle.version apply false
+    id("org.jetbrains.kotlin.android") version Dep.Kotlin.version apply false
 }
 
 buildscript {
 
     dependencies {
-        classpath(Dependency.Jetpack.Hilt.plugin)
-        classpath(Dependency.Jetpack.Navigation.SafeArgs.plugin)
+        classpath(Dep.Jetpack.Hilt.plugin)
+        classpath(Dep.Jetpack.Navigation.SafeArgs.plugin)
     }
 }
 
@@ -17,12 +17,12 @@ subprojects {
         if (hasProperty("android")) {
             if (name == "app") {
                 androidApp {
-                    compileSdk = Dependency.AppConfig.compileSdkVersion
+                    compileSdk = Dep.AppConfig.compileSdkVersion
 
                     defaultConfig {
-                        minSdk = Dependency.AppConfig.minSdkVersion
-                        targetSdk = Dependency.AppConfig.targetSdkVersion
-                        testInstrumentationRunner = TestDependency.testRunner
+                        minSdk = Dep.AppConfig.minSdkVersion
+                        targetSdk = Dep.AppConfig.targetSdkVersion
+                        testInstrumentationRunner = TestDep.testRunner
                     }
 
                     compileOptions {
@@ -38,12 +38,12 @@ subprojects {
             } else {
                 androidLib {
 
-                    compileSdk = Dependency.AppConfig.compileSdkVersion
+                    compileSdk = Dep.AppConfig.compileSdkVersion
 
                     defaultConfig {
-                        minSdk = Dependency.AppConfig.minSdkVersion
-                        targetSdk = Dependency.AppConfig.targetSdkVersion
-                        testInstrumentationRunner = TestDependency.testRunner
+                        minSdk = Dep.AppConfig.minSdkVersion
+                        targetSdk = Dep.AppConfig.targetSdkVersion
+                        testInstrumentationRunner = TestDep.testRunner
                     }
 
                     compileOptions {

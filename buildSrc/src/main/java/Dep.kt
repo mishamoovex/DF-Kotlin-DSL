@@ -1,4 +1,4 @@
-object Dependency {
+object Dep {
 
     object AppConfig {
         const val compileSdkVersion = 32

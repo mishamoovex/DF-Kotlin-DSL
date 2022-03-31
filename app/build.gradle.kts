@@ -10,13 +10,13 @@ plugins {
 android {
 
     defaultConfig {
-        applicationId = Dependency.AppConfig.applicationId
-        versionCode = Dependency.AppConfig.versionCode
-        versionName = Dependency.AppConfig.versionName
+        applicationId = Dep.AppConfig.applicationId
+        versionCode = Dep.AppConfig.versionCode
+        versionName = Dep.AppConfig.versionName
     }
 
     buildTypes {
-        getByName(Dependency.AppConfig.BuildTypeNames.release) {
+        getByName(Dep.AppConfig.BuildTypeNames.release) {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -32,40 +32,40 @@ android {
 
 dependencies {
     //Kotlin
-    implementation(Dependency.Kotlin.Coroutines.lib)
+    implementation(Dep.Kotlin.Coroutines.lib)
     //AndroidX components
-    implementation(Dependency.AndroidX.KtxExtension.lib)
-    implementation(Dependency.AndroidX.ScreenComponent.Activity.lib)
-    implementation(Dependency.AndroidX.ScreenComponent.Fragment.lib)
-    implementation(Dependency.AndroidX.UI.AppCompat.lib)
-    implementation(Dependency.AndroidX.UI.MaterialDesign.lib)
-    implementation(Dependency.AndroidX.UI.ConstraintLayout.lib)
+    implementation(Dep.AndroidX.KtxExtension.lib)
+    implementation(Dep.AndroidX.ScreenComponent.Activity.lib)
+    implementation(Dep.AndroidX.ScreenComponent.Fragment.lib)
+    implementation(Dep.AndroidX.UI.AppCompat.lib)
+    implementation(Dep.AndroidX.UI.MaterialDesign.lib)
+    implementation(Dep.AndroidX.UI.ConstraintLayout.lib)
     //lifecycle
-    implementation(Dependency.Jetpack.Lifecycle.liveData)
-    implementation(Dependency.Jetpack.Lifecycle.viewModel)
-    implementation(Dependency.Jetpack.Lifecycle.compilerJava8)
+    implementation(Dep.Jetpack.Lifecycle.liveData)
+    implementation(Dep.Jetpack.Lifecycle.viewModel)
+    implementation(Dep.Jetpack.Lifecycle.compilerJava8)
     //Hilt
-    implementation(Dependency.Jetpack.Hilt.lib)
-    implementation(Dependency.Jetpack.Hilt.navigation)
-    kapt(Dependency.Jetpack.Hilt.kapt)
+    implementation(Dep.Jetpack.Hilt.lib)
+    implementation(Dep.Jetpack.Hilt.navigation)
+    kapt(Dep.Jetpack.Hilt.kapt)
     //Room
-    implementation(Dependency.Jetpack.Room.lib)
-    implementation(Dependency.Jetpack.Room.coroutines)
-    implementation(Dependency.Jetpack.Room.paging)
-    kapt(Dependency.Jetpack.Room.kapt)
+    implementation(Dep.Jetpack.Room.lib)
+    implementation(Dep.Jetpack.Room.coroutines)
+    implementation(Dep.Jetpack.Room.paging)
+    kapt(Dep.Jetpack.Room.kapt)
     //Navigation
-    implementation(Dependency.Jetpack.Navigation.lib)
-    implementation(Dependency.Jetpack.Navigation.ui)
-    implementation(Dependency.Jetpack.Navigation.dynamicFeature)
+    implementation(Dep.Jetpack.Navigation.lib)
+    implementation(Dep.Jetpack.Navigation.ui)
+    implementation(Dep.Jetpack.Navigation.dynamicFeature)
     //Paging
-    implementation(Dependency.Jetpack.Paging.lib)
+    implementation(Dep.Jetpack.Paging.lib)
     //Work manager
-    implementation(Dependency.Jetpack.WorkManager.lib)
+    implementation(Dep.Jetpack.WorkManager.lib)
     //Network
-    implementation(Dependency.Network.Retrofit.lib)
-    implementation(Dependency.Network.Retrofit.jsonConverter)
-    implementation(Dependency.Network.OkHttp.lib)
-    implementation(Dependency.Network.OkHttp.loggingInterceptor)
+    implementation(Dep.Network.Retrofit.lib)
+    implementation(Dep.Network.Retrofit.jsonConverter)
+    implementation(Dep.Network.OkHttp.lib)
+    implementation(Dep.Network.OkHttp.loggingInterceptor)
 
 
     testImplementation("junit:junit:4.13.2")

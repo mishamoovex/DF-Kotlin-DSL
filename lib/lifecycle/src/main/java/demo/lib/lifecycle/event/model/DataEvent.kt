@@ -1,4 +1,4 @@
-package demo.lib.lifecycle.event
+package demo.lib.lifecycle.event.model
 
 class DataEvent<out T: Any>(private val data: T) {
 

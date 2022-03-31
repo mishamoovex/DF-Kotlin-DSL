@@ -1,4 +1,4 @@
-package demo.lib.lifecycle.event
+package demo.lib.lifecycle.event.model
 
 class Event {
 

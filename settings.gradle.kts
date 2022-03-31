@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 rootProject.name = "DemoApp"
 include(":app")
 include(":lib:lifecycle")
+include(":lib:navigation")

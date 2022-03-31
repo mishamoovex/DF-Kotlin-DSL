@@ -8,10 +8,16 @@ plugins {
 }
 
 android {
+
+    compileSdk = Dependency.AppConfig.compileSdkVersion
+
     defaultConfig {
         applicationId = Dependency.AppConfig.applicationId
+        minSdk = Dependency.AppConfig.minSdkVersion
+        targetSdk = Dependency.AppConfig.targetSdkVersion
         versionCode = Dependency.AppConfig.versionCode
         versionName = Dependency.AppConfig.versionName
+        testInstrumentationRunner = TestDependency.testRunner
     }
 
     buildTypes {
@@ -22,6 +28,19 @@ android {
                 "proguard-rules.pro"
             )
         }
+    }
+
+    compileOptions {
+        sourceCompatibility(JavaVersion.VERSION_1_8)
+        targetCompatibility(JavaVersion.VERSION_1_8)
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    buildFeatures {
+        dataBinding = true
     }
 }
 

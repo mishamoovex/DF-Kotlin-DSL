@@ -1,23 +1,23 @@
-package demo.lib.lifecycle.observer
+package demo.lib.lifecycle.event.observer
 
 import androidx.annotation.MainThread
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
-import demo.lib.lifecycle.event.Event
+import demo.lib.lifecycle.event.model.NullableDataEvent
 
 /**
- * An [Observer] for [Event]s, simplifying the pattern of checking if the [Event]'s content has
+ * An [Observer] for [NullableDataEvent]s, simplifying the pattern of checking if the [NullableDataEvent]'s content has
  * already been handled.
  *
- * [block] is *only* called if the [Event]'s contents has not been handled.
+ * [block] is *only* called if the [NullableDataEvent]'s contents has not been handled.
  */
-class EventObserver(private val block: () -> Unit) : Observer<Event> {
+class NullableDataObserver<T>(private val block: (T?) -> Unit): Observer<NullableDataEvent<T?>> {
 
-    override fun onChanged(event: Event) {
-        if (event.getEventIfNoHandled()) {
-            block()
+    override fun onChanged(event: NullableDataEvent<T?>) {
+        if (!event.hasBeenHandled()){
+            block(event.getData())
         }
     }
 
@@ -48,11 +48,11 @@ class EventObserver(private val block: () -> Unit) : Observer<Event> {
  * ignores the call.
  */
 @MainThread
-inline fun LiveData<Event>.observeEvent(
+inline fun <T> LiveData<NullableDataEvent<T>>.observeNullableEvent(
     owner: LifecycleOwner,
-    crossinline onChanged: () -> Unit
-): EventObserver {
-    val wrappedObserver = EventObserver { onChanged.invoke() }
-    observe(owner, wrappedObserver as Observer<Event>)
+    crossinline onChanged: (T?) -> Unit
+): NullableDataObserver<T> {
+    val wrappedObserver = NullableDataObserver<T> { t -> onChanged.invoke(t) }
+    observe(owner, wrappedObserver as Observer<NullableDataEvent<T?>>)
     return wrappedObserver
 }

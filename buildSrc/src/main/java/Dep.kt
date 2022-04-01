@@ -1,21 +1,21 @@
 object Dep {
 
-    object AppConfig {
-        const val compileSdkVersion = 32
-        const val applicationId = "ua.gov.diia.demoapp"
-        const val minSdkVersion = 24
-        const val targetSdkVersion = 32
-        const val versionCode = 1
-        const val versionName = "1.0"
-
-        object BuildTypeNames {
-            const val release = "release"
-            const val debug = "debug"
-        }
-    }
-
     object Gradle {
         const val version = "7.1.2"
+
+        object AppConfig {
+            const val compileSdkVersion = 32
+            const val applicationId = "ua.gov.diia.demoapp"
+            const val minSdkVersion = 24
+            const val targetSdkVersion = 32
+            const val versionCode = 1
+            const val versionName = "1.0"
+
+            object BuildTypeNames {
+                const val release = "release"
+                const val debug = "debug"
+            }
+        }
 
         /**
          * This dependency require additional setups

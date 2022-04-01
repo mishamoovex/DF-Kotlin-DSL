@@ -10,13 +10,13 @@ plugins {
 android {
 
     defaultConfig {
-        applicationId = Dep.AppConfig.applicationId
-        versionCode = Dep.AppConfig.versionCode
-        versionName = Dep.AppConfig.versionName
+        applicationId = Dep.Gradle.AppConfig.applicationId
+        versionCode = Dep.Gradle.AppConfig.versionCode
+        versionName = Dep.Gradle.AppConfig.versionName
     }
 
     buildTypes {
-        getByName(Dep.AppConfig.BuildTypeNames.release) {
+        getByName(Dep.Gradle.AppConfig.BuildTypeNames.release) {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),

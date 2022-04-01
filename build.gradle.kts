@@ -17,11 +17,11 @@ subprojects {
         if (isAndroidLibrary()) {
             if (isAppModule()) {
                 androidApp {
-                    compileSdk = Dep.AppConfig.compileSdkVersion
+                    compileSdk = Dep.Gradle.AppConfig.compileSdkVersion
 
                     defaultConfig {
-                        minSdk = Dep.AppConfig.minSdkVersion
-                        targetSdk = Dep.AppConfig.targetSdkVersion
+                        minSdk = Dep.Gradle.AppConfig.minSdkVersion
+                        targetSdk = Dep.Gradle.AppConfig.targetSdkVersion
                         testInstrumentationRunner = TestDep.testRunner
                     }
 
@@ -38,11 +38,11 @@ subprojects {
             } else {
                 androidLib {
 
-                    compileSdk = Dep.AppConfig.compileSdkVersion
+                    compileSdk = Dep.Gradle.AppConfig.compileSdkVersion
 
                     defaultConfig {
-                        minSdk = Dep.AppConfig.minSdkVersion
-                        targetSdk = Dep.AppConfig.targetSdkVersion
+                        minSdk = Dep.Gradle.AppConfig.minSdkVersion
+                        targetSdk = Dep.Gradle.AppConfig.targetSdkVersion
                         testInstrumentationRunner = TestDep.testRunner
                     }
 

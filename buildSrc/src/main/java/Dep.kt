@@ -16,6 +16,20 @@ object Dep {
 
     object Gradle {
         const val version = "7.1.2"
+
+        /**
+         * This dependency require additional setups
+         *
+         * compileOptions {
+         *      isCoreLibraryDesugaringEnabled = true
+         *      sourceCompatibility(JavaVersion.VERSION_1_8)
+         *      targetCompatibility(JavaVersion.VERSION_1_8)
+         *  }
+         */
+        object Desugaring {
+            private const val version = "1.1.5"
+            const val lib = "com.android.tools:desugar_jdk_libs:$version"
+        }
     }
 
     object Kotlin {

@@ -1,3 +1,5 @@
+@file:Suppress("UnstableApiUsage")
+
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -17,3 +19,4 @@ include(":app")
 include(":lib:lifecycle")
 include(":lib:navigation")
 include(":lib:recycler")
+include(":lib:dateTimeDialog")

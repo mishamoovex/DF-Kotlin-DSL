@@ -14,8 +14,8 @@ buildscript {
 
 subprojects {
     afterEvaluate {
-        if (hasProperty("android")) {
-            if (name == "app") {
+        if (isAndroidLibrary()) {
+            if (isAppModule()) {
                 androidApp {
                     compileSdk = Dep.AppConfig.compileSdkVersion
 
@@ -59,6 +59,10 @@ subprojects {
         }
     }
 }
+
+fun Project.isAndroidLibrary(): Boolean = hasProperty("android")
+
+fun Project.isAppModule(): Boolean = name == "app"
 
 fun Project.androidApp(configure: Action<com.android.build.gradle.internal.dsl.BaseAppModuleExtension>): Unit =
     (this as ExtensionAware).extensions.configure("android", configure)

@@ -1,5 +1,7 @@
 @file:Suppress("UnstableApiUsage")
 
+include(":lib:bindings")
+
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -15,8 +17,12 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "DemoApp"
+//application
 include(":app")
+//libs
 include(":lib:lifecycle")
 include(":lib:navigation")
 include(":lib:recycler")
 include(":lib:dateTimeDialog")
+//features
+include(":features:splashScreen")

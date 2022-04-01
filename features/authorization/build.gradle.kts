@@ -13,6 +13,7 @@ android{
 
 dependencies {
 
+    implementation(project(":lib:styles"))
     implementation(project(":lib:lifecycle"))
 
     //Kotlin

@@ -32,6 +32,8 @@ android {
 
 dependencies {
 
+    implementation(project(":lib:styles"))
+
     implementation(project(":features:splashScreen"))
     implementation(project(":features:authorization"))
 

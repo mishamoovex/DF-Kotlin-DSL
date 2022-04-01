@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import dagger.hilt.android.AndroidEntryPoint
 import demo.features.splashscreen.databinding.FragmentSplashBinding
+import demo.lib.navigation.navigation.navigate
 
 @AndroidEntryPoint
 class SplashF : Fragment() {
@@ -18,7 +19,14 @@ class SplashF : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentSplashBinding.inflate(inflater, container, false)
+        binding = FragmentSplashBinding.inflate(inflater, container, false).apply {
+            btnAuthSplash.setOnClickListener {
+                navigate(
+                    uri = "android-app://demo.feature/authorization",
+                    popInclusive = true
+                )
+            }
+        }
         return binding?.root
     }
 

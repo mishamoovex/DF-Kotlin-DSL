@@ -1,7 +1,5 @@
 @file:Suppress("UnstableApiUsage")
 
-include(":features:authorization")
-
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -26,3 +24,4 @@ include(":lib:recycler")
 include(":lib:dateTimeDialog")
 //features
 include(":features:splashScreen")
+include(":features:authorization")

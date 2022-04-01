@@ -33,6 +33,7 @@ android {
 dependencies {
 
     implementation(project(":features:splashScreen"))
+    implementation(project(":features:authorization"))
 
     //Kotlin
     implementation(Dep.Kotlin.Coroutines.lib)

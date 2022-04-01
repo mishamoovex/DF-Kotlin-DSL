@@ -14,6 +14,7 @@ android{
 dependencies {
 
     implementation(project(":lib:lifecycle"))
+    implementation(project(":lib:navigation"))
 
     //Kotlin
     implementation(Dep.Kotlin.Coroutines.lib)

@@ -8,4 +8,6 @@
         android:id="@+id/splashF"
         android:name="demo.features.splashscreen.SplashF" />
 
+    <include app:graph="@navigation/nav_authorization" />
+
 </navigation>

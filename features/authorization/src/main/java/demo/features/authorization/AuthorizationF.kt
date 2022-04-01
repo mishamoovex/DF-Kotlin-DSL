@@ -24,6 +24,6 @@ class AuthorizationF : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
-        binding = null
+        binding
     }
 }

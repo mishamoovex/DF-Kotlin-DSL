@@ -10,7 +10,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import demo.features.authorization.databinding.FragmentAuthorizationBinding
 
 @AndroidEntryPoint
-class SelectAuthMethodF : Fragment() {
+internal class SelectAuthMethodF : Fragment() {
 
     private val viewModel: SelectAuthMethodVM by viewModels()
     private var binding: FragmentAuthorizationBinding? = null

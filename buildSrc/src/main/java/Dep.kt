@@ -85,6 +85,7 @@ object Dep {
         object Lifecycle {
             private const val version = "2.4.1"
 
+            const val lifecycle = "androidx.lifecycle:lifecycle-runtime-ktx:$version"
             const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$version"
             const val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:$version"
             const val compilerJava8 = "androidx.lifecycle:lifecycle-common-java8:$version"

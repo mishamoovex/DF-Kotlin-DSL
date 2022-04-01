@@ -1,4 +1,7 @@
 @file:Suppress("UnstableApiUsage")
+
+include(":lib:bindings")
+
 pluginManagement {
     repositories {
         gradlePluginPortal()

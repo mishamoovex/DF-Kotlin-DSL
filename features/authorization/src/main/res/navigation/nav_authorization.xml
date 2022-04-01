@@ -2,15 +2,36 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_authorization"
-    app:startDestination="@id/authorizationF">
+    app:startDestination="@id/destination_selectAuthMethods">
 
     <fragment
-        android:id="@+id/authorizationF"
-        android:name="demo.features.authorization.AuthorizationF"
+        android:id="@+id/destination_selectAuthMethods"
+        android:name="demo.features.authorization.presentation.method.SelectAuthMethodF"
         android:label="AuthorizationF">
         <deepLink
             android:id="@+id/deepLink"
             app:uri="android-app://demo.feature/authorization" />
+        <action
+            android:id="@+id/action_destination_selectAuthMethods_to_destination_emailAuth"
+            app:destination="@id/destination_emailAuth" />
+        <action
+            android:id="@+id/action_destination_selectAuthMethods_to_destination_passwordAuth"
+            app:destination="@id/destination_passwordAuth" />
+        <action
+            android:id="@+id/action_destination_selectAuthMethods_to_destination_phoneAuth"
+            app:destination="@id/destination_phoneAuth" />
     </fragment>
+
+    <fragment
+        android:id="@+id/destination_phoneAuth"
+        android:name="demo.features.authorization.presentation.auth.phone.PhoneAuthF" />
+
+    <fragment
+        android:id="@+id/destination_passwordAuth"
+        android:name="demo.features.authorization.presentation.auth.password.PasswordAuthF" />
+
+    <fragment
+        android:id="@+id/destination_emailAuth"
+        android:name="demo.features.authorization.presentation.auth.email.EmailAuthF" />
 
 </navigation>

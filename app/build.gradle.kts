@@ -31,11 +31,14 @@ android {
 }
 
 dependencies {
+
+    implementation(project(":features:splashScreen"))
+    implementation(project(":features:authorization"))
+
     //Kotlin
     implementation(Dep.Kotlin.Coroutines.lib)
     //AndroidX components
     implementation(Dep.AndroidX.KtxExtension.lib)
-    implementation(Dep.AndroidX.ScreenComponent.Activity.lib)
     implementation(Dep.AndroidX.ScreenComponent.Fragment.lib)
     implementation(Dep.AndroidX.UI.AppCompat.lib)
     implementation(Dep.AndroidX.UI.MaterialDesign.lib)

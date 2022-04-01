@@ -100,10 +100,10 @@ object Dep {
                 "androidx.navigation:navigation-dynamic-features-fragment:$version"
 
             /**
-             * This dependency requires additional plugins: "androidx.navigation.safeargs.kotlin"
+             * This dependency requires additional plugin (androidx.navigation.safeargs.kotlin)
              */
             object SafeArgs {
-                const val plugin = "androidx.navigation:navigation-safe-args-gradle-plugin:$version"
+                const val gradlePlugin = "androidx.navigation:navigation-safe-args-gradle-plugin:$version"
             }
         }
 
@@ -142,7 +142,7 @@ object Dep {
 
             const val lib = "com.google.dagger:hilt-android:$hiltVersion"
             const val navigation = "androidx.hilt:hilt-navigation-fragment:$hiltNavigationVersion"
-            const val plugin = "com.google.dagger:hilt-android-gradle-plugin:$hiltVersion"
+            const val gradlePlugin = "com.google.dagger:hilt-android-gradle-plugin:$hiltVersion"
             const val kapt = "com.google.dagger:hilt-compiler:$hiltVersion"
         }
 
@@ -164,4 +164,35 @@ object Dep {
             const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:$version"
         }
     }
+
+    object Firebase {
+        private const val versionGradlePlugin = "4.3.10"
+        const val gradlePlugin = "com.google.gms:google-services:$versionGradlePlugin"
+
+        /**
+         * Requires GooglePlay app level plugin id(com.google.gms.google-services)
+         */
+        object Analytics{
+            private const val version = "20.1.2"
+            const val lib = "com.google.firebase:firebase-analytics-ktx:$version"
+        }
+
+        /**
+         * Requires app level plugin id(com.google.firebase.crashlytics)
+         */
+        object Crashlytics{
+            private const val versionLib = "18.2.9"
+            private const val versionGradlePlugin = "2.8.1"
+            const val lib = "com.google.firebase:firebase-crashlytics-ktx:$versionLib"
+            const val gradlePlugin = "com.google.firebase:firebase-crashlytics-gradle:$versionGradlePlugin"
+        }
+
+        object AuthEmail {
+            private const val version = "21.0.3"
+            private const val versionGPlay = "20.1.0"
+            const val auth = "com.google.firebase:firebase-auth-ktx:$version"
+            const val authGPlay = "com.google.android.gms:play-services-auth:$versionGPlay"
+        }
+    }
+
 }

@@ -22,6 +22,7 @@ include(":lib:lifecycle")
 include(":lib:navigation")
 include(":lib:recycler")
 include(":lib:dateTimeDialog")
+include(":lib:styles")
 //features
 include(":features:splashScreen")
 include(":features:authorization")

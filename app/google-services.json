@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1059409726158",
+    "project_id": "demoapp-872b7",
+    "storage_bucket": "demoapp-872b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1059409726158:android:f4ea660c4369eb83b55e9f",
+        "android_client_info": {
+          "package_name": "ua.gov.diia.demoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1059409726158-niicku2gu73r8uvd684maou0de4m6fc7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ua.gov.diia.demoapp",
+            "certificate_hash": "0a0bdc27cbaa4d9f2617815027557c8f1244b15e"
+          }
+        },
+        {
+          "client_id": "1059409726158-579fog3kp7hobgrh09l0cvi7a0hhr6vu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBP8kcrJb3DVQ5ZTk_70Z5oQNwLAVdTTVg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1059409726158-579fog3kp7hobgrh09l0cvi7a0hhr6vu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

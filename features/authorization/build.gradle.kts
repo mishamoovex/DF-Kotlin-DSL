@@ -32,6 +32,9 @@ dependencies {
     //Navigation
     implementation(Dep.Jetpack.Navigation.lib)
     implementation(Dep.Jetpack.Navigation.ui)
+    //Firebase
+    implementation(Dep.Firebase.AuthEmail.auth)
+    implementation(Dep.Firebase.AuthEmail.authGPlay)
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.3")

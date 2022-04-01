@@ -5,6 +5,8 @@ plugins {
     id("kotlin-parcelize")
     id("dagger.hilt.android.plugin")
     id("androidx.navigation.safeargs.kotlin")
+    id("com.google.gms.google-services")
+    id("com.google.firebase.crashlytics")
 }
 
 android {
@@ -71,6 +73,9 @@ dependencies {
     implementation(Dep.Network.Retrofit.jsonConverter)
     implementation(Dep.Network.OkHttp.lib)
     implementation(Dep.Network.OkHttp.loggingInterceptor)
+    //Firebase
+    implementation(Dep.Firebase.Analytics.lib)
+    implementation(Dep.Firebase.Crashlytics.lib)
 
 
     testImplementation("junit:junit:4.13.2")

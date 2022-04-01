@@ -7,8 +7,10 @@ plugins {
 buildscript {
 
     dependencies {
-        classpath(Dep.Jetpack.Hilt.plugin)
-        classpath(Dep.Jetpack.Navigation.SafeArgs.plugin)
+        classpath(Dep.Jetpack.Hilt.gradlePlugin)
+        classpath(Dep.Jetpack.Navigation.SafeArgs.gradlePlugin)
+        classpath(Dep.Firebase.gradlePlugin)
+        classpath(Dep.Firebase.Crashlytics.gradlePlugin)
     }
 }
 

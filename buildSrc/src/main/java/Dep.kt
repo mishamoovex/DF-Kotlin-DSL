@@ -189,9 +189,7 @@ object Dep {
 
         object AuthEmail {
             private const val version = "21.0.3"
-            private const val versionGPlay = "20.1.0"
-            const val auth = "com.google.firebase:firebase-auth-ktx:$version"
-            const val authGPlay = "com.google.android.gms:play-services-auth:$versionGPlay"
+            const val lib = "com.google.firebase:firebase-auth-ktx:$version"
         }
     }
 

@@ -1,4 +1,4 @@
-package ua.gov.diia.demoapp
+package demo.lib.bindings
 
 import android.view.View
 import androidx.fragment.app.Fragment

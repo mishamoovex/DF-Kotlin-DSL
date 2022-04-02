@@ -5,11 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import dagger.hilt.android.AndroidEntryPoint
 import demo.features.splashscreen.databinding.FragmentSplashBinding
 import demo.lib.navigation.navigation.navigate
 
-@AndroidEntryPoint
 class SplashF : Fragment() {
 
     private var binding: FragmentSplashBinding? = null

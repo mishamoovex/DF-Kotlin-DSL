@@ -5,8 +5,13 @@ plugins {
 
 android{
 
+    compileSdk = Dep.Gradle.AppConfig.compileSdkVersion
+
     compileOptions {
         isCoreLibraryDesugaringEnabled = true
+    }
+    defaultConfig {
+        multiDexEnabled = true
     }
 }
 

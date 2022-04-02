@@ -9,11 +9,15 @@ plugins {
 }
 
 android {
+    compileSdk = Dep.Gradle.AppConfig.compileSdkVersion
 
     defaultConfig {
         applicationId = Dep.Gradle.AppConfig.applicationId
+        minSdk = Dep.Gradle.AppConfig.minSdkVersion
+        targetSdk = Dep.Gradle.AppConfig.targetSdkVersion
         versionCode = Dep.Gradle.AppConfig.versionCode
         versionName = Dep.Gradle.AppConfig.versionName
+        testInstrumentationRunner = TestDep.testRunner
     }
 
     buildTypes {
@@ -21,22 +25,31 @@ android {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
+                "proguard-rules-dynamic-features.pro"
             )
         }
+    }
+
+    compileOptions {
+        sourceCompatibility(JavaVersion.VERSION_11)
+        targetCompatibility(JavaVersion.VERSION_11)
+    }
+
+    kotlinOptions {
+        jvmTarget = "11"
     }
 
     buildFeatures {
         dataBinding = true
     }
+
+    setDynamicFeatures(Dep.dynamicFeatures)
 }
 
 dependencies {
 
     implementation(project(":lib:styles"))
-
-    implementation(project(":features:splashScreen"))
-    implementation(project(":features:authorization"))
 
     //Kotlin
     implementation(Dep.Kotlin.Coroutines.lib)
@@ -49,7 +62,7 @@ dependencies {
     //lifecycle
     implementation(Dep.Jetpack.Lifecycle.liveData)
     implementation(Dep.Jetpack.Lifecycle.viewModel)
-    implementation(Dep.Jetpack.Lifecycle.compilerJava8)
+    kapt(Dep.Jetpack.Lifecycle.kapt)
     //Dependency Injection
     implementation(Dep.Jetpack.Dagger2.lib)
     kapt(Dep.Jetpack.Dagger2.kapt)

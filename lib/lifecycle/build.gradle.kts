@@ -3,6 +3,10 @@ plugins {
     kotlin("android")
 }
 
+android{
+    compileSdk = Dep.Gradle.AppConfig.compileSdkVersion
+}
+
 dependencies {
 
     implementation(Dep.Jetpack.Lifecycle.liveData)

@@ -1,5 +1,10 @@
 object Dep {
 
+     val dynamicFeatures = setOf(
+        ":features:splashScreen",
+        ":features:authorization"
+    )
+
     object Gradle {
         const val version = "7.1.2"
 
@@ -88,6 +93,7 @@ object Dep {
             const val lifecycle = "androidx.lifecycle:lifecycle-runtime-ktx:$version"
             const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$version"
             const val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:$version"
+            const val kapt = "androidx.lifecycle:lifecycle-compiler$version"
             const val compilerJava8 = "androidx.lifecycle:lifecycle-common-java8:$version"
         }
 
@@ -96,8 +102,7 @@ object Dep {
 
             const val lib = "androidx.navigation:navigation-fragment-ktx:$version"
             const val ui = "androidx.navigation:navigation-ui-ktx:$version"
-            const val dynamicFeature =
-                "androidx.navigation:navigation-dynamic-features-fragment:$version"
+            const val dynamicFeature = "androidx.navigation:navigation-dynamic-features-fragment:$version"
 
             /**
              * This dependency requires additional plugin (androidx.navigation.safeargs.kotlin)

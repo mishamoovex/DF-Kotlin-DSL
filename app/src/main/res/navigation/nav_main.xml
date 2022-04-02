@@ -2,12 +2,13 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_main"
-    app:startDestination="@id/splashF">
+    app:startDestination="@id/placeholder">
 
-    <fragment
-        android:id="@+id/splashF"
-        android:name="demo.features.splashscreen.SplashF" />
+<!--    <fragment-->
+<!--        android:id="@+id/splashF"-->
+<!--        android:name="demo.features.splashscreen.presentation.SplashF" />-->
 
-    <include app:graph="@navigation/nav_authorization" />
+<!--    <include app:graph="@navigation/nav_authorization" />-->
 
+    <fragment android:id="@+id/placeholder" />
 </navigation>

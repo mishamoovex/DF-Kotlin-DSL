@@ -1,10 +1,31 @@
 plugins {
-    id("com.android.library")
-    id("org.jetbrains.kotlin.android")
+    id("com.android.dynamic-feature")
+    kotlin("android")
     kotlin("kapt")
 }
 
-android{
+android {
+
+    compileSdk = Dep.Gradle.AppConfig.compileSdkVersion
+
+    defaultConfig {
+        minSdk = Dep.Gradle.AppConfig.minSdkVersion
+        testInstrumentationRunner = TestDep.testRunner
+    }
+
+    compileOptions {
+        sourceCompatibility(JavaVersion.VERSION_11)
+        targetCompatibility(JavaVersion.VERSION_11)
+    }
+
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+
+    testOptions {
+
+    }
+
     buildFeatures {
         dataBinding = true
     }
@@ -15,6 +36,8 @@ dependencies {
     implementation(project(":lib:styles"))
     implementation(project(":lib:lifecycle"))
 
+    implementation(project(":app"))
+
     //Kotlin
     implementation(Dep.Kotlin.Coroutines.lib)
     //AndroidX components
@@ -23,7 +46,7 @@ dependencies {
     //lifecycle
     implementation(Dep.Jetpack.Lifecycle.liveData)
     implementation(Dep.Jetpack.Lifecycle.viewModel)
-    implementation(Dep.Jetpack.Lifecycle.compilerJava8)
+    kapt(Dep.Jetpack.Lifecycle.kapt)
     //Dependency Injection
     implementation(Dep.Jetpack.Dagger2.lib)
     kapt(Dep.Jetpack.Dagger2.kapt)

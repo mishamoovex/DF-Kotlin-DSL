@@ -3,6 +3,10 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 
+android{
+    compileSdk = Dep.Gradle.AppConfig.compileSdkVersion
+}
+
 dependencies {
 
     implementation(Dep.Kotlin.Coroutines.lib)

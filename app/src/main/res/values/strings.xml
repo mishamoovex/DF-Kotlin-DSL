@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">DemoApp</string>
+    <!-- Dynamic feature titles -->
+    <string name="df_splash">Splash screen</string>
+    <string name="df_authorization">Authorization</string>
+
 </resources>

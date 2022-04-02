@@ -1,10 +1,5 @@
 object Dep {
 
-     val dynamicFeatures = setOf(
-        ":features:splashScreen",
-        ":features:authorization"
-    )
-
     object Gradle {
         const val version = "7.1.2"
 

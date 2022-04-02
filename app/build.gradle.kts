@@ -43,8 +43,7 @@ android {
     buildFeatures {
         dataBinding = true
     }
-
-    setDynamicFeatures(Dep.dynamicFeatures)
+    dynamicFeatures += setOf(":features:splashScreen", ":features:authorization")
 }
 
 dependencies {
@@ -54,31 +53,16 @@ dependencies {
     //Kotlin
     implementation(Dep.Kotlin.Coroutines.lib)
     //AndroidX components
-    implementation(Dep.AndroidX.KtxExtension.lib)
-    implementation(Dep.AndroidX.ScreenComponent.Fragment.lib)
     implementation(Dep.AndroidX.UI.AppCompat.lib)
     implementation(Dep.AndroidX.UI.MaterialDesign.lib)
     implementation(Dep.AndroidX.UI.ConstraintLayout.lib)
-    //lifecycle
-    implementation(Dep.Jetpack.Lifecycle.liveData)
-    implementation(Dep.Jetpack.Lifecycle.viewModel)
-    kapt(Dep.Jetpack.Lifecycle.kapt)
     //Dependency Injection
     implementation(Dep.Jetpack.Dagger2.lib)
     kapt(Dep.Jetpack.Dagger2.kapt)
-    //Room
-    implementation(Dep.Jetpack.Room.lib)
-    implementation(Dep.Jetpack.Room.coroutines)
-    implementation(Dep.Jetpack.Room.paging)
-    kapt(Dep.Jetpack.Room.kapt)
     //Navigation
     implementation(Dep.Jetpack.Navigation.lib)
     implementation(Dep.Jetpack.Navigation.ui)
     implementation(Dep.Jetpack.Navigation.dynamicFeature)
-    //Paging
-    implementation(Dep.Jetpack.Paging.lib)
-    //Work manager
-    implementation(Dep.Jetpack.WorkManager.lib)
     //Network
     implementation(Dep.Network.Retrofit.lib)
     implementation(Dep.Network.Retrofit.jsonConverter)

@@ -34,7 +34,7 @@ android {
 dependencies {
 
     implementation(project(":lib:styles"))
-    implementation(project(":lib:lifecycle"))
+//    implementation(project(":lib:lifecycle"))
 
     implementation(project(":app"))
 
@@ -44,9 +44,9 @@ dependencies {
     implementation(Dep.AndroidX.UI.AppCompat.lib)
     implementation(Dep.AndroidX.UI.MaterialDesign.lib)
     //lifecycle
-    implementation(Dep.Jetpack.Lifecycle.liveData)
-    implementation(Dep.Jetpack.Lifecycle.viewModel)
-    kapt(Dep.Jetpack.Lifecycle.kapt)
+//    implementation(Dep.Jetpack.Lifecycle.liveData)
+//    implementation(Dep.Jetpack.Lifecycle.viewModel)
+//    kapt(Dep.Jetpack.Lifecycle.kapt)
     //Dependency Injection
     implementation(Dep.Jetpack.Dagger2.lib)
     kapt(Dep.Jetpack.Dagger2.kapt)

@@ -19,7 +19,6 @@ rootProject.name = "DemoApp"
 include(":app")
 //libs
 include(":lib:recycler")
-include(":lib:styles")
 //features
 include(":features:splashScreen")
 include(":features:authorization")

@@ -12,8 +12,6 @@ android{
 
 dependencies {
 
-    implementation(project(":lib:styles"))
-
     //Kotlin
     implementation(Dep.Kotlin.Coroutines.lib)
     //AndroidX components

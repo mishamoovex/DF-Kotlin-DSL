@@ -1,4 +1,4 @@
-package demo.lib.recycler.decorators.list
+package ua.gov.diia.demoapp.core.ui.decorators.decorators.list
 
 import android.graphics.Rect
 import android.view.View

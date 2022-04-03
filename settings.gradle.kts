@@ -15,10 +15,6 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "DemoApp"
-//application
 include(":app")
-//libs
-include(":lib:recycler")
-//features
 include(":features:splashScreen")
 include(":features:authorization")

@@ -52,25 +52,15 @@ dependencies {
     implementation(Dep.Kotlin.Coroutines.lib)
     //AndroidX components
     implementation(Dep.AndroidX.KtxExtension.lib)
-    implementation(Dep.AndroidX.ScreenComponent.Fragment.lib)
     implementation(Dep.AndroidX.UI.AppCompat.lib)
     implementation(Dep.AndroidX.UI.MaterialDesign.lib)
     implementation(Dep.AndroidX.UI.ConstraintLayout.lib)
-    //lifecycle
-    implementation(Dep.Jetpack.Lifecycle.liveData)
-    implementation(Dep.Jetpack.Lifecycle.viewModel)
-    implementation(Dep.Jetpack.Lifecycle.compilerJava8)
     //Dependency Injection
     implementation(Dep.Dagger2.lib)
     kapt(Dep.Dagger2.kapt)
     //Navigation
     implementation(Dep.Jetpack.Navigation.lib)
-    implementation(Dep.Jetpack.Navigation.ui)
     implementation(Dep.Jetpack.Navigation.dynamicFeature)
-    //Paging
-    implementation(Dep.Jetpack.Paging.lib)
-    //Work manager
-    implementation(Dep.Jetpack.WorkManager.lib)
     //Network
     implementation(Dep.Network.Retrofit.lib)
     implementation(Dep.Network.Retrofit.jsonConverter)
@@ -79,7 +69,6 @@ dependencies {
     //Firebase
     implementation(Dep.Firebase.Analytics.lib)
     implementation(Dep.Firebase.Crashlytics.lib)
-
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.3")

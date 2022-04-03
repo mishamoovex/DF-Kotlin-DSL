@@ -1,4 +1,4 @@
-package demo.lib.recycler.ext
+package ua.gov.diia.demoapp.core.ui.decorators.ext
 
 import androidx.recyclerview.widget.RecyclerView
 

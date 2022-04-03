@@ -26,7 +26,6 @@ dependencies {
     kapt(Dep.Dagger2.kapt)
     //Navigation
     implementation(Dep.Jetpack.Navigation.lib)
-    implementation(Dep.Jetpack.Navigation.ui)
     //Firebase
     implementation(Dep.Firebase.AuthEmail.lib)
 

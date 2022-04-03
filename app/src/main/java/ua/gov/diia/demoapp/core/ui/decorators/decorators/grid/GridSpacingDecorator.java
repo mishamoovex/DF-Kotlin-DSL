@@ -1,4 +1,4 @@
-package demo.lib.recycler.decorators.grid;
+package ua.gov.diia.demoapp.core.ui.decorators.decorators.grid;
 
 import android.graphics.Rect;
 import android.view.View;

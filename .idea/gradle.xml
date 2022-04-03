@@ -15,8 +15,6 @@
             <option value="$PROJECT_DIR$/features" />
             <option value="$PROJECT_DIR$/features/authorization" />
             <option value="$PROJECT_DIR$/features/splashScreen" />
-            <option value="$PROJECT_DIR$/lib" />
-            <option value="$PROJECT_DIR$/lib/recycler" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

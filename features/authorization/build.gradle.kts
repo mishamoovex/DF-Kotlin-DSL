@@ -2,7 +2,6 @@ plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
     kotlin("kapt")
-    id("dagger.hilt.android.plugin")
 }
 
 android{
@@ -25,10 +24,9 @@ dependencies {
     implementation(Dep.Jetpack.Lifecycle.liveData)
     implementation(Dep.Jetpack.Lifecycle.viewModel)
     implementation(Dep.Jetpack.Lifecycle.compilerJava8)
-    //Hilt
-    implementation(Dep.Jetpack.Hilt.lib)
-    implementation(Dep.Jetpack.Hilt.navigation)
-    kapt(Dep.Jetpack.Hilt.kapt)
+    //Dependency Injection
+    implementation(Dep.Dagger2.lib)
+    kapt(Dep.Dagger2.kapt)
     //Navigation
     implementation(Dep.Jetpack.Navigation.lib)
     implementation(Dep.Jetpack.Navigation.ui)

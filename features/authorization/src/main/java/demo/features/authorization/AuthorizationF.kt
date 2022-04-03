@@ -5,10 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import dagger.hilt.android.AndroidEntryPoint
 import demo.features.authorization.databinding.FragmentAuthorizationBinding
 
-@AndroidEntryPoint
 class AuthorizationF : Fragment() {
 
     private var binding: FragmentAuthorizationBinding? = null
@@ -18,7 +16,7 @@ class AuthorizationF : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentAuthorizationBinding.inflate(inflater,container,false)
+        binding = FragmentAuthorizationBinding.inflate(inflater, container, false)
         return binding?.root
     }
 

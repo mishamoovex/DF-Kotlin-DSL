@@ -3,7 +3,6 @@ plugins {
     kotlin("android")
     kotlin("kapt")
     id("kotlin-parcelize")
-    id("dagger.hilt.android.plugin")
     id("androidx.navigation.safeargs.kotlin")
     id("com.google.gms.google-services")
     id("com.google.firebase.crashlytics")
@@ -51,15 +50,9 @@ dependencies {
     implementation(Dep.Jetpack.Lifecycle.liveData)
     implementation(Dep.Jetpack.Lifecycle.viewModel)
     implementation(Dep.Jetpack.Lifecycle.compilerJava8)
-    //Hilt
-    implementation(Dep.Jetpack.Hilt.lib)
-    implementation(Dep.Jetpack.Hilt.navigation)
-    kapt(Dep.Jetpack.Hilt.kapt)
-    //Room
-    implementation(Dep.Jetpack.Room.lib)
-    implementation(Dep.Jetpack.Room.coroutines)
-    implementation(Dep.Jetpack.Room.paging)
-    kapt(Dep.Jetpack.Room.kapt)
+    //Dependency Injection
+    implementation(Dep.Dagger2.lib)
+    kapt(Dep.Dagger2.kapt)
     //Navigation
     implementation(Dep.Jetpack.Navigation.lib)
     implementation(Dep.Jetpack.Navigation.ui)

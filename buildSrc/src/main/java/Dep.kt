@@ -148,6 +148,13 @@ object Dep {
 
     }
 
+    object Dagger2{
+        private const val version = "2.41"
+
+        const val lib = "com.google.dagger:dagger:$version"
+        const val kapt = "com.google.dagger:dagger-compiler:$version"
+    }
+
     object Network {
 
         object Retrofit {

@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import demo.features.splashscreen.databinding.FragmentSplashBinding
 import demo.features.splashscreen.di.injectGraph
-import demo.lib.navigation.navigation.navigate
+import ua.gov.diia.demoapp.presentation.MainActivity
 
 internal class SplashF : Fragment() {
 
@@ -26,17 +26,16 @@ internal class SplashF : Fragment() {
     ): View? {
         binding = FragmentSplashBinding.inflate(inflater, container, false).apply {
             btnAuthSplash.setOnClickListener {
-                navigate(
-                    uri = "android-app://demo.feature/authorization",
-                    popInclusive = true
-                )
+                (requireActivity() as MainActivity).navigateToAuth()
             }
         }
         return binding?.root
     }
 
+
     override fun onDestroyView() {
         super.onDestroyView()
         binding = null
     }
+
 }

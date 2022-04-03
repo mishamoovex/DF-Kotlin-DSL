@@ -2,6 +2,7 @@ plugins {
     id("com.android.dynamic-feature")
     kotlin("android")
     kotlin("kapt")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -22,10 +23,6 @@ android {
         jvmTarget = "11"
     }
 
-    testOptions {
-
-    }
-
     buildFeatures {
         dataBinding = true
     }
@@ -33,8 +30,6 @@ android {
 
 dependencies {
 
-    implementation(project(":lib:styles"))
-//    implementation(project(":lib:lifecycle"))
 
     implementation(project(":app"))
 
@@ -52,7 +47,6 @@ dependencies {
     kapt(Dep.Jetpack.Dagger2.kapt)
     //Navigation
     implementation(Dep.Jetpack.Navigation.lib)
-    implementation(Dep.Jetpack.Navigation.ui)
     //Firebase
     implementation(Dep.Firebase.AuthEmail.lib)
 

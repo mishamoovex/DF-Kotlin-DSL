@@ -7,7 +7,7 @@
     tools:context=".presentation.MainActivity">
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/nav_host_activity"
+        android:id="@+id/navHost_main"
         android:name="androidx.navigation.dynamicfeatures.fragment.DynamicNavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

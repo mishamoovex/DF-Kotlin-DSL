@@ -28,10 +28,6 @@ android {
 
 dependencies {
 
-    implementation(project(":lib:styles"))
-//    implementation(project(":lib:lifecycle"))
-    implementation(project(":lib:navigation"))
-
     implementation(project(":app"))
 
     //Kotlin

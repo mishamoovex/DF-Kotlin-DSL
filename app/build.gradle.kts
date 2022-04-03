@@ -43,7 +43,10 @@ android {
     buildFeatures {
         dataBinding = true
     }
-    dynamicFeatures += setOf(":features:splashScreen", ":features:authorization")
+    dynamicFeatures += setOf(
+        ":features:splashScreen",
+        ":features:authorization"
+    )
 }
 
 dependencies {

@@ -10,7 +10,7 @@ import androidx.fragment.app.viewModels
 import demo.features.authorization.databinding.FragmentAuthorizationBinding
 import demo.features.authorization.di.injectGraph
 
-internal class SelectAuthMethodF : Fragment() {
+class SelectAuthMethodF : Fragment() {
 
     private val viewModel: SelectAuthMethodVM by viewModels()
     private var binding: FragmentAuthorizationBinding? = null
@@ -25,7 +25,15 @@ internal class SelectAuthMethodF : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentAuthorizationBinding.inflate(inflater, container, false)
+        binding = FragmentAuthorizationBinding.inflate(inflater, container, false).apply {
+            btnAuthNavigate.setOnClickListener {
+//                findNavController().navigate(
+//                    SelectAuthMethodFDirections.actionDestinationSelectAuthMethodsToDestinationPasswordAuth()
+//                )
+
+            }
+
+        }
         return binding?.root
     }
 

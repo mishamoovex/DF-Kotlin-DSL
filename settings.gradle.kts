@@ -1,5 +1,8 @@
 @file:Suppress("UnstableApiUsage")
 
+include(":features:splash")
+
+
 pluginManagement {
     repositories {
         gradlePluginPortal()

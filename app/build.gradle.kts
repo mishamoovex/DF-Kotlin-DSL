@@ -18,17 +18,13 @@ android {
 
     compileOptions {
         isCoreLibraryDesugaringEnabled = true
-        sourceCompatibility(JavaVersion.VERSION_1_8)
-        targetCompatibility(JavaVersion.VERSION_1_8)
-    }
-
-    kotlinOptions {
-        jvmTarget = "1.8"
     }
 
     buildFeatures {
         dataBinding = true
     }
+
+    dynamicFeatures += setOf(":features:splash")
 
     buildTypes {
         getByName(Dep.Gradle.AppConfig.BuildTypeNames.release) {
@@ -42,7 +38,6 @@ android {
 }
 
 dependencies {
-
 
     //Desugaring to able to use Java8 time lib
     coreLibraryDesugaring(Dep.Gradle.Desugaring.lib)
@@ -67,8 +62,4 @@ dependencies {
     //Firebase
     implementation(Dep.Firebase.Analytics.lib)
     implementation(Dep.Firebase.Crashlytics.lib)
-
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.3")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
 }

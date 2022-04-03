@@ -1,4 +1,4 @@
-package demo.lib.navigation.result
+package ua.gov.diia.demoapp.core.navigation.result
 
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavBackStackEntry

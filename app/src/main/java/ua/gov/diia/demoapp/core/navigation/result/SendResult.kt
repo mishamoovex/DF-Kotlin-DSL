@@ -1,4 +1,4 @@
-package demo.lib.navigation.result
+package ua.gov.diia.demoapp.core.navigation.result
 
 import androidx.annotation.IdRes
 import androidx.fragment.app.Fragment
@@ -16,18 +16,18 @@ import androidx.navigation.fragment.findNavController
  *
  * If we want to pop back stack to some arbitrary destination(if we have mote than 3 items on the back stack)
  * after sending result (not to the previous one) we should find that destination [NavBackStackEntry],
- * through destination ID, because [NavBackStackEntry.getPreviousBackStackEntry] will not send result
+ * through destination ID, because previousBackStackEntry will not send result
  * to the right destination in this case.
  *
  * @param destinationId any destination [IdRes] in the [NavGraph] to which we want send data back,
  *                      by default result will be sent to the previous destination if the
  *                      destination ID wasn't specified
  *
- * @param key the key to receive data via [registerForResult] or [registerForResultOnce] callbacks
+ * @param key the key to receive data via [registerForFragmentNavResult]  callback
  *
  * @param data the result data to return back to the caller
  */
-fun <T: Any> Fragment.sendResult(
+fun <T: Any> Fragment.sendNavigationResult(
     key: String,
     data: T,
     @IdRes destinationId: Int? = null

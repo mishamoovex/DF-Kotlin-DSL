@@ -1,4 +1,4 @@
-package demo.lib.navigation.result
+package ua.gov.diia.demoapp.core.navigation.result
 
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -9,9 +9,9 @@ import androidx.navigation.fragment.findNavController
  *
  * @param key the key of the data request
  *
- * @param resultEvent the result callback with the data returned from the [sendResult]
+ * @param resultEvent the result callback with the data returned from the [sendNavigationResult]
  */
-inline fun <T : Any> Fragment.registerForResult(
+inline fun <T : Any> Fragment.registerForFragmentNavResult(
     key: String,
     crossinline resultEvent: (T) -> Unit
 ) {

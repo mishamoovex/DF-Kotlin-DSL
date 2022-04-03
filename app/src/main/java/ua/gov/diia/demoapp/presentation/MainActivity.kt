@@ -1,7 +1,8 @@
-package ua.gov.diia.demoapp
+package ua.gov.diia.demoapp.presentation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import ua.gov.diia.demoapp.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

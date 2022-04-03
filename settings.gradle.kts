@@ -19,7 +19,6 @@ rootProject.name = "DemoApp"
 include(":app")
 //libs
 include(":lib:lifecycle")
-include(":lib:navigation")
 include(":lib:recycler")
 include(":lib:dateTimeDialog")
 include(":lib:styles")

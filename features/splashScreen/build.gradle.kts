@@ -14,7 +14,6 @@ dependencies {
 
     implementation(project(":lib:styles"))
     implementation(project(":lib:lifecycle"))
-    implementation(project(":lib:navigation"))
 
     //Kotlin
     implementation(Dep.Kotlin.Coroutines.lib)

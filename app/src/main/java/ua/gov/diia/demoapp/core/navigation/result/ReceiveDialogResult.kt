@@ -1,11 +1,11 @@
-package demo.lib.navigation.result
+package ua.gov.diia.demoapp.core.navigation.result
 
 import androidx.annotation.IdRes
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.navigation.fragment.findNavController
-import demo.lib.navigation.destination.currentDestinationId
+import ua.gov.diia.demoapp.core.navigation.destination.currentDestinationId
 
 /**
  * Registers for result callbacks from a Dialog or BottomSheet destination.
@@ -13,9 +13,9 @@ import demo.lib.navigation.destination.currentDestinationId
  *
  * @param key the key of the data request
  *
- * @param resultEvent the result callback with the data returned from the [sendResult]
+ * @param resultEvent the result callback with the data returned from the [sendNavigationResult]
  */
-inline fun <T : Any> Fragment.registerForDialogNavigationResult(
+inline fun <T : Any> Fragment.registerForDialogNavResult(
     key: String,
     crossinline resultEvent: (T) -> Unit
 ) {

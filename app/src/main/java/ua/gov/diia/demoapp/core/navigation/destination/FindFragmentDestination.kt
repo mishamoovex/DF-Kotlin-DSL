@@ -1,4 +1,4 @@
-package demo.lib.navigation.destination
+package ua.gov.diia.demoapp.core.navigation.destination
 
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController

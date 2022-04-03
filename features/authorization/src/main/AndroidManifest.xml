@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:dist="http://schemas.android.com/apk/distribution"
-    package="demo.features.splash">
+    package="demo.features.authorization">
 
     <dist:module
         dist:instant="false"
-        dist:title="@string/title_splash">
+        dist:title="@string/title_authorization">
         <dist:delivery>
             <dist:install-time />
         </dist:delivery>

@@ -1,7 +1,7 @@
 plugins {
     id("com.android.application") version Dep.Gradle.version apply false
-    id("com.android.dynamic-feature") version Dep.Gradle.version apply false
-    id("org.jetbrains.kotlin.android") version Dep.Kotlin.version apply false
+    id("com.android.dynamic-feature") version "7.1.2" apply false
+    id("org.jetbrains.kotlin.android") version "1.6.10" apply false
 
 }
 

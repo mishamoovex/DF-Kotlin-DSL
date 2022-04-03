@@ -9,7 +9,6 @@ plugins {
 }
 
 android {
-
     defaultConfig {
         applicationId = Dep.Gradle.AppConfig.applicationId
         versionCode = Dep.Gradle.AppConfig.versionCode
@@ -24,7 +23,10 @@ android {
         dataBinding = true
     }
 
-    dynamicFeatures += setOf(":features:splash")
+    dynamicFeatures += setOf(
+        ":features:splash",
+        ":features:authorization"
+    )
 
     buildTypes {
         getByName(Dep.Gradle.AppConfig.BuildTypeNames.release) {

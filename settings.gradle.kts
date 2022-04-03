@@ -1,8 +1,4 @@
 @file:Suppress("UnstableApiUsage")
-
-include(":features:splash")
-
-
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -17,5 +13,9 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
+
 rootProject.name = "DemoApp"
+
 include(":app")
+include(":features:splash")
+include(":features:authorization")

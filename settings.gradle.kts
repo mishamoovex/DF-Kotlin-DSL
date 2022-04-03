@@ -16,5 +16,3 @@ dependencyResolutionManagement {
 }
 rootProject.name = "DemoApp"
 include(":app")
-include(":features:splashScreen")
-include(":features:authorization")

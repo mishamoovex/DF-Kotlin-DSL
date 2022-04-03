@@ -43,8 +43,6 @@ android {
 
 dependencies {
 
-    implementation(project(":features:splashScreen"))
-    implementation(project(":features:authorization"))
 
     //Desugaring to able to use Java8 time lib
     coreLibraryDesugaring(Dep.Gradle.Desugaring.lib)

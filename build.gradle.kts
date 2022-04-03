@@ -25,16 +25,6 @@ subprojects {
                         targetSdk = Dep.Gradle.AppConfig.targetSdkVersion
                         testInstrumentationRunner = TestDep.testRunner
                     }
-
-                    compileOptions {
-                        sourceCompatibility(JavaVersion.VERSION_1_8)
-                        targetCompatibility(JavaVersion.VERSION_1_8)
-                    }
-
-                    kotlinOptionsApp {
-                        jvmTarget = "1.8"
-                    }
-
                 }
             } else {
                 androidLib {

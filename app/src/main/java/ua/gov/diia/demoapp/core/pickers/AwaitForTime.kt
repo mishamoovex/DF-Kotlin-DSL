@@ -1,4 +1,4 @@
-package demo.lib.datetimedialog
+package ua.gov.diia.demoapp.core.pickers
 
 import android.app.TimePickerDialog
 import androidx.fragment.app.Fragment

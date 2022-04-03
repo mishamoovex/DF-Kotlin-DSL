@@ -16,6 +16,20 @@ android {
         versionName = Dep.Gradle.AppConfig.versionName
     }
 
+    compileOptions {
+        isCoreLibraryDesugaringEnabled = true
+        sourceCompatibility(JavaVersion.VERSION_1_8)
+        targetCompatibility(JavaVersion.VERSION_1_8)
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    buildFeatures {
+        dataBinding = true
+    }
+
     buildTypes {
         getByName(Dep.Gradle.AppConfig.BuildTypeNames.release) {
             isMinifyEnabled = false
@@ -24,10 +38,6 @@ android {
                 "proguard-rules.pro"
             )
         }
-    }
-
-    buildFeatures {
-        dataBinding = true
     }
 }
 
@@ -38,6 +48,8 @@ dependencies {
     implementation(project(":features:splashScreen"))
     implementation(project(":features:authorization"))
 
+    //Desugaring to able to use Java8 time lib
+    coreLibraryDesugaring(Dep.Gradle.Desugaring.lib)
     //Kotlin
     implementation(Dep.Kotlin.Coroutines.lib)
     //AndroidX components

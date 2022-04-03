@@ -13,7 +13,6 @@ android{
 dependencies {
 
     implementation(project(":lib:styles"))
-    implementation(project(":lib:lifecycle"))
 
     //Kotlin
     implementation(Dep.Kotlin.Coroutines.lib)

@@ -1,11 +1,11 @@
-package demo.lib.lifecycle.event.observer
+package ua.gov.diia.demoapp.core.lifecycle.event.observer
 
 import androidx.annotation.MainThread
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
-import demo.lib.lifecycle.event.model.Event
+import ua.gov.diia.demoapp.core.lifecycle.event.model.Event
 
 /**
  * An [Observer] for [Event]s, simplifying the pattern of checking if the [Event]'s content has

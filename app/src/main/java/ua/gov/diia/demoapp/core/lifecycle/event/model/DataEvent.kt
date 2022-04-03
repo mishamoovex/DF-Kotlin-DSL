@@ -1,4 +1,4 @@
-package demo.lib.lifecycle.event.model
+package ua.gov.diia.demoapp.core.lifecycle.event.model
 
 class DataEvent<out T: Any>(private val data: T) {
 

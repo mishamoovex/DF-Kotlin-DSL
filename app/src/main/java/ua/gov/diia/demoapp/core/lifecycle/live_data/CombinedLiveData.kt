@@ -1,4 +1,4 @@
-package demo.lib.lifecycle.live_data
+package ua.gov.diia.demoapp.core.lifecycle.live_data
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData

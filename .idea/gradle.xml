@@ -17,7 +17,6 @@
             <option value="$PROJECT_DIR$/features/splashScreen" />
             <option value="$PROJECT_DIR$/lib" />
             <option value="$PROJECT_DIR$/lib/dateTimeDialog" />
-            <option value="$PROJECT_DIR$/lib/lifecycle" />
             <option value="$PROJECT_DIR$/lib/recycler" />
             <option value="$PROJECT_DIR$/lib/styles" />
           </set>

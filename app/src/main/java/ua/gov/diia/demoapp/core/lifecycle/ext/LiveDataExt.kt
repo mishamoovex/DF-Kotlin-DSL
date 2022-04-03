@@ -1,4 +1,4 @@
-package demo.lib.lifecycle.ext
+package ua.gov.diia.demoapp.core.lifecycle.ext
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

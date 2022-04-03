@@ -1,4 +1,4 @@
-package demo.lib.lifecycle.event.model
+package ua.gov.diia.demoapp.core.lifecycle.event.model
 
 class NullableDataEvent<out T>(private val data: T? = null) {
 
